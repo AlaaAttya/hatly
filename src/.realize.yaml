@@ -5,7 +5,16 @@ settings:
 schema:
 - name: app
   path: .
-  commands: {}
+  commands:
+    install:
+      status: true
+      method: go build -o app
+    build:
+      method: go build -o app
+      status: true
+    run:
+      method: ./app
+      status: true
   watcher:
     extensions:
     - go

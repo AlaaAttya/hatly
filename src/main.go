@@ -5,13 +5,10 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"go.mongodb.org/mongo-driver/mongo"
-	"go.mongodb.org/mongo-driver/mongo/options"
-	"go.mongodb.org/mongo-driver/mongo/readpref"
 )
 
 func main() {
-	fmt.Println("Hello world")
+	fmt.Println("starting server at port 8080...")
 
 	router := mux.NewRouter()
 	router.HandleFunc("/api/session", func(res http.ResponseWriter, req *http.Request) {

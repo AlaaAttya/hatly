@@ -14,4 +14,4 @@ RUN go mod download
 
 EXPOSE 80
 
-CMD ["/wait", "go run main.go"]
+#CMD ["/wait", "go run main.go"]

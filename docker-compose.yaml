@@ -10,7 +10,7 @@ services:
     - 8080:8080
     volumes:
     - ./src:/app
-    command: ["realize", "start", "--name", "api"]
+    command: ["realize", "start"]
   mongodb:
     container_name: db
     image: mongo:3.6.22
