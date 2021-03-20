@@ -1,0 +1,55 @@
+openapi: 3.0.3
+info:
+  title: backend api for Hatly
+  version: 1.0.0
+  
+paths:
+  /session:
+    post:
+      summary: create or join a new session by code and username
+      requestBody:
+        description: request schema for create or join a new session by code and username 
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                code:
+                  type: string
+                username:
+                  type: string
+                
+  
+  /session/{id}:
+    get:
+      summary: get session items
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties: 
+                    id: 
+                      type: string
+                    title:
+                      type: string
+                    quantity:
+                      type: integer
+                    owner:
+                      type: object
+                      properties:
+                        id: 
+                          type: string
+                        name:
+                          type: string
+                
+    patch:
+      summary: end session
+      
+                
+        
+    
+      
