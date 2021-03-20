@@ -11,8 +11,8 @@ func main() {
 	fmt.Println("starting server at port 8080...")
 
 	router := mux.NewRouter()
-	router.HandleFunc("/api/session", func(res http.ResponseWriter, req *http.Request) {
-
+	router.HandleFunc("/session", func(res http.ResponseWriter, req *http.Request) {
+		fmt.Println("hello session")
 	})
 	router.HandleFunc("/api/session/id/", func(res http.ResponseWriter, req *http.Request) {
 
