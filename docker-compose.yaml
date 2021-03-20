@@ -1,0 +1,22 @@
+version: '3.5'
+
+services:
+  backend-api:
+    container_name: api
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+    - 8080:8080
+    volumes:
+    - ./src:/app
+    command: ["realize", "start", "--name", "api"]
+  mongodb:
+    container_name: db
+    image: mongo:3.6.22
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: hatly_db
+    ports:
+    - 27018:27017
