@@ -1,0 +1,23 @@
+.button {
+  min-width: 180px;
+  min-height: 40px;
+  background: #FFA500;
+  border: 1px solid #FFA500;
+  border-radius: 25px;
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 0.50px;
+}
+
+.button:hover {
+  background: #000000;
+  border: 1px solid #6B6B6B;
+  color: #FFFFFF;
+}
+
+.button.disabled {
+  border: 1px solid #ECECEC;
+  color: #DFDFDF;
+  opacity: 1;
+  background: #FFFFFF;
+}
